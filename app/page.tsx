@@ -14,10 +14,12 @@ export default function Home() {
   return (
     <>
       <Navbar />
-      <main className="relative mx-auto flex min-h-screen w-full max-w-5xl flex-col gap-10 overflow-hidden px-5 pb-28 pt-12 sm:px-8 md:gap-12 md:px-12 md:pt-16 lg:px-16">
-      <div className="fixed inset-0 pointer-events-none light-mode-fade-bottom dark:fade-bottom z-10 bg-white/10 dark:bg-black/10" />
+      <main className="relative isolate mx-auto flex min-h-screen w-full max-w-5xl flex-col overflow-hidden px-5 pb-28 pt-12 sm:px-8 md:px-12 md:pt-16 lg:px-16">
+      <div className="fixed inset-0 z-0 pointer-events-none light-mode-fade-bottom dark:fade-bottom" />
+      <div className="relative z-10">
       <CustomDock />
 
+      <div className="flex flex-col gap-10 md:gap-12">
       <section id="home" className="scroll-mt-24">
         <Intro />
       </section>
@@ -45,6 +47,8 @@ export default function Home() {
       <section id="contact" className="scroll-mt-24">
         <ContactMe />
       </section>
+      </div>
+      </div>
       </main>
     </>
   );
