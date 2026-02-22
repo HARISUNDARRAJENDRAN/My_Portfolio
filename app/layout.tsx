@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import { Providers } from "./providers";
+import { Analytics } from "@vercel/analytics/next";
 
 const newsReader = localFont({
   src: "./fonts/Newsreader[opsz,wght].ttf",
@@ -24,6 +25,7 @@ export default function RootLayout({
       <body
         className={`${newsReader.variable} bg-zinc-50 font-sans text-zinc-900 antialiased transition-colors dark:bg-zinc-950 dark:text-zinc-100`}
       >
+        <Analytics />
         <Providers>{children}</Providers>
       </body>
     </html>
