@@ -1,6 +1,8 @@
-# Portfolio
+# A Minimal Portfolio for developers developed by me
 
-Personal portfolio built with Next.js App Router, TypeScript, and Tailwind CSS.
+This is a Personal portfolio for developers that is built with Next.js App Router, TypeScript, and Tailwind CSS.
+
+<img width="1285" height="680" alt="image" src="https://github.com/user-attachments/assets/19d80480-0bd1-4a62-b355-cce64404a795" />
 
 ## Tech Stack
 
