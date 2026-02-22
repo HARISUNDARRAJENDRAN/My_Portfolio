@@ -1,36 +1,72 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Portfolio
 
-## Getting Started
+Personal portfolio built with Next.js App Router, TypeScript, and Tailwind CSS.
 
-First, run the development server:
+## Tech Stack
+
+- Next.js 16
+- React 19
+- TypeScript
+- Tailwind CSS
+
+## Features
+
+- Work experience, education, skills, and projects sections
+- Personal life routes for books, manga, and movies/series
+- Live GitHub contribution activity via GitHub GraphQL API
+- Spotify "last played / now playing" widget
+
+## Local Development
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Run dev server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open http://localhost:3000
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Environment Variables
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Create a local env file:
 
-## Learn More
+```bash
+cp .env.example .env.local
+```
 
-To learn more about Next.js, take a look at the following resources:
+Required values:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- `GITHUB_TOKEN` (scope: `read:user`)
+- `SPOTIFY_CLIENT_ID`
+- `SPOTIFY_CLIENT_SECRET`
+- `SPOTIFY_REFRESH_TOKEN`
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Spotify refresh token scopes:
 
-## Deploy on Vercel
+- `user-read-recently-played`
+- `user-read-currently-playing`
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Scripts
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- `npm run dev` - start development server
+- `npm run build` - create production build
+- `npm run start` - start production server
+- `npm run lint` - run lint checks
+
+## Deployment (Vercel Recommended)
+
+1. Push repo to GitHub
+2. Import project into Vercel
+3. Add environment variables in Vercel Project Settings
+4. Add custom domain (`hxsundr.dev`) in Vercel and configure DNS records at your registrar
+
+## Notes
+
+- Never commit secrets (`.env`, `.env.local`)
+- Rotate tokens/secrets immediately if they were ever exposed
