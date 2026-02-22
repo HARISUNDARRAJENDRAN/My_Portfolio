@@ -23,7 +23,7 @@ export default function WorkExperience() {
       role: "Software Intern",
       location: "Guindy",
       period: "Dec 2025 - Jan 2026",
-      logo: "/images/Congruent_Solution",
+      logo: "/images/Congruent_Solution.png",
       techStack: ["MySQL", "PostgreSQL", "PathRAG", "LightRAG", "Query Optimization"],
       highlights: [
         "Performed DB migrations from MySQL to PostgreSQL, including schema mapping, data validation, and migration script updates to maintain integrity across environments.",
@@ -51,7 +51,7 @@ export default function WorkExperience() {
       role: "Software Development Intern",
       location: "Chennai",
       period: "May-Jul 2024",
-      logo: "/images/nexdha",
+      logo: "/images/nexdha.jpg",
       techStack: ["JavaScript", "REST APIs", "NLP", "OpenCV"],
       highlights: [
         "Built responsive web applications with JavaScript and RESTful APIs; developed an AI chatbot with NLP capabilities and context management, with improved conversational continuity through structured intent handling and fallback flows.",
