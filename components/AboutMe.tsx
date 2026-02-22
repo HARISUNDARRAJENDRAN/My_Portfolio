@@ -121,6 +121,9 @@ export default function AboutMe() {
                   </>
                 )}
               </p>
+              <p className="mt-3 text-center text-sm italic text-zinc-600 dark:text-zinc-400">
+                Is the Grass really green on the other side
+              </p>
             </div>
             <a
               href="https://github.com/HARISUNDARRAJENDRAN"
