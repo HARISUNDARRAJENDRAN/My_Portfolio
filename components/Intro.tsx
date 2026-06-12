@@ -9,10 +9,10 @@ export default function Intro() {
   return (
     <div className="-z-10 flex w-full flex-col-reverse items-center justify-between gap-10 lg:flex-row">
       <div className="flex w-full flex-col gap-3 lg:w-4/5">
-        <h1 className="text-4xl font-bold tracking-tight text-slate-900 dark:text-slate-50">
-          Hello! I&apos;m <HyperText className="inline-block text-slate-900 dark:text-slate-50">Harisundar</HyperText>.
+        <h1 className="text-4xl font-bold tracking-tight text-navy">
+          Hello! I&apos;m <HyperText className="inline-block text-navy">Harisundar</HyperText>.
         </h1>
-        <p className="text-base leading-7 text-slate-700 dark:text-slate-300">
+        <p className="text-base leading-7 text-zinc-700">
           Aspiring AI & ML Engineer passionate on building innovative solutions that solve real-world problems.
         </p>
         <p className="muted-copy">
@@ -34,7 +34,7 @@ export default function Intro() {
           alt="Yatharth"
           width={160}
           height={160}
-          className="rounded-full border-2 border-slate-200 object-cover dark:border-slate-700"
+          className="rounded-full border-2 border-slate-200 object-cover"
           priority
         />
         <SpotifyLastPlayedMini />

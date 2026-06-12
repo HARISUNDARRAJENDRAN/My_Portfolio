@@ -52,7 +52,6 @@ async function getAccessToken() {
       grant_type: "refresh_token",
       refresh_token: refreshToken,
     }),
-    cache: "no-store",
   });
 
   if (!response.ok) {
@@ -83,7 +82,6 @@ export async function GET() {
       headers: {
         Authorization: `Bearer ${accessToken}`,
       },
-      cache: "no-store",
     });
 
     if (nowPlayingResponse.ok && nowPlayingResponse.status !== 204) {
@@ -97,11 +95,11 @@ export async function GET() {
       headers: {
         Authorization: `Bearer ${accessToken}`,
       },
-      cache: "no-store",
     });
 
     if (!recentlyPlayedResponse.ok) {
-      throw new Error("Unable to fetch recently played tracks.");
+      const errBody = await recentlyPlayedResponse.text();
+      throw new Error(`Spotify API ${recentlyPlayedResponse.status}: ${errBody}`);
     }
 
     const recentlyPlayedData = (await recentlyPlayedResponse.json()) as {

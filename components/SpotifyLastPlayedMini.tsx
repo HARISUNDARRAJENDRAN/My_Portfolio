@@ -48,7 +48,7 @@ export default function SpotifyLastPlayedMini() {
   useEffect(() => {
     const fetchTrack = async () => {
       try {
-        const response = await fetch("/api/spotify-last-listened", { cache: "no-store" });
+        const response = await fetch("/api/spotify-last-listened");
         const data = await response.json();
 
         if (!response.ok) {
@@ -69,17 +69,17 @@ export default function SpotifyLastPlayedMini() {
   }, []);
 
   return (
-    <div className="mt-4 w-full max-w-md rounded-xl border border-zinc-200 bg-white/80 p-3 text-left shadow-sm dark:border-zinc-800 dark:bg-zinc-900/60">
+    <div className="mt-4 w-full max-w-md rounded-xl border border-zinc-200 bg-white/80 p-3 text-left shadow-sm">
       {loading ? (
-        <p className="text-xs text-zinc-600 dark:text-zinc-400">Loading latest track...</p>
+        <p className="text-xs text-zinc-600">Loading latest track...</p>
       ) : error ? (
         <div className="space-y-1">
-          <p className="text-xs text-zinc-700 dark:text-zinc-300">Connect Spotify to show recent track.</p>
-          <p className="text-[11px] text-zinc-500 dark:text-zinc-500">Set SPOTIFY_REFRESH_TOKEN in env.</p>
+          <p className="text-xs text-zinc-700">Connect Spotify to show recent track.</p>
+          <p className="text-[11px] text-zinc-500">Set SPOTIFY_REFRESH_TOKEN in env.</p>
         </div>
       ) : track ? (
         <div className="flex items-center gap-3">
-          <div className="h-12 w-12 flex-shrink-0 overflow-hidden rounded-md bg-zinc-200 dark:bg-zinc-800">
+          <div className="h-12 w-12 flex-shrink-0 overflow-hidden rounded-md bg-zinc-200">
             {track.imageUrl ? (
               <img
                 src={track.imageUrl}
@@ -90,7 +90,7 @@ export default function SpotifyLastPlayedMini() {
           </div>
 
           <div className="min-w-0 flex-1">
-            <div className="mb-0.5 flex items-center gap-2 text-[11px] text-zinc-500 dark:text-zinc-400">
+            <div className="mb-0.5 flex items-center gap-2 text-[11px] text-zinc-500">
               <span className="h-2 w-2 rounded-full bg-emerald-500" />
               <span>{track.isPlaying ? "Now playing" : "Last played"}</span>
             </div>
@@ -98,12 +98,12 @@ export default function SpotifyLastPlayedMini() {
               href={track.songUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="block truncate text-base font-medium text-zinc-900 hover:underline dark:text-zinc-100"
+              className="block truncate text-base font-medium text-zinc-900 hover:underline"
             >
               {track.name}
             </a>
-            <p className="truncate text-sm text-zinc-600 dark:text-zinc-400">by {track.artist}</p>
-            <p className="truncate text-[11px] text-zinc-500 dark:text-zinc-500">{getPlayedLabel(track)}</p>
+            <p className="truncate text-sm text-zinc-600">by {track.artist}</p>
+            <p className="truncate text-[11px] text-zinc-500">{getPlayedLabel(track)}</p>
           </div>
 
           <a
@@ -111,13 +111,13 @@ export default function SpotifyLastPlayedMini() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Open track on Spotify"
-            className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg border border-zinc-200 text-zinc-700 transition-colors hover:bg-zinc-100 dark:border-zinc-700 dark:text-zinc-300 dark:hover:bg-zinc-800"
+            className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg border border-zinc-200 text-zinc-700 transition-colors hover:bg-zinc-100"
           >
             <Play className="h-4 w-4" />
           </a>
         </div>
       ) : (
-        <p className="text-xs text-zinc-600 dark:text-zinc-400">No recent track found.</p>
+        <p className="text-xs text-zinc-600">No recent track found.</p>
       )}
     </div>
   );

@@ -32,10 +32,10 @@ export default function Education() {
               />
             </div>
             <div>
-              <h3 className="font-semibold text-zinc-900 dark:text-zinc-100">
+              <h3 className="font-semibold text-zinc-900">
                 {edu.institution}
               </h3>
-              <p className="text-zinc-600 dark:text-zinc-400">
+              <p className="text-zinc-600">
                 {edu.location ? `${edu.location} | ${edu.period}` : edu.period}
               </p>
             </div>

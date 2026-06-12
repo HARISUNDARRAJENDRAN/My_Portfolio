@@ -56,17 +56,17 @@ export default function Projects() {
             href={project.link}
             target="_blank"
             rel="noreferrer"
-            className="section-card block p-6 transition-colors hover:border-zinc-300 dark:hover:border-zinc-700"
+            className="section-card block p-6 transition-colors hover:border-zinc-300"
           >
-            <h3 className="font-semibold text-zinc-900 dark:text-zinc-100">
+            <h3 className="font-semibold text-zinc-900">
               {project.title}
             </h3>
-            <p className="text-zinc-600 dark:text-zinc-400 mt-2">{project.description}</p>
+            <p className="text-zinc-600 mt-2">{project.description}</p>
             <div className="flex gap-2 mt-4">
               {project.tech.map((t) => (
                 <span
                   key={t}
-                  className="text-xs px-2 py-1 bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400 rounded"
+                  className="text-xs px-2 py-1 bg-zinc-100 text-zinc-600 rounded"
                 >
                   {t}
                 </span>

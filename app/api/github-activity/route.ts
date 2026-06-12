@@ -100,7 +100,6 @@ export async function GET(request: NextRequest) {
         to: now.toISOString(),
       },
     }),
-    cache: "no-store",
   });
 
   if (!response.ok) {

@@ -14,41 +14,57 @@ export default function Home() {
   return (
     <>
       <Navbar />
-      <main className="relative isolate mx-auto flex min-h-screen w-full max-w-5xl flex-col overflow-hidden px-5 pb-28 pt-12 sm:px-8 md:px-12 md:pt-16 lg:px-16">
-      <div className="fixed inset-0 z-0 pointer-events-none light-mode-fade-bottom dark:fade-bottom" />
-      <div className="relative z-10">
-      <CustomDock />
+      <main className="relative isolate mx-auto flex min-h-screen w-full max-w-5xl flex-col overflow-hidden px-5 pb-28 pt-12 sm:px-8 md:ml-24 md:px-12 md:pt-16 lg:px-16">
+        <div className="fixed inset-0 z-0 pointer-events-none light-mode-fade-bottom" />
+        <div className="relative z-10">
+          <CustomDock />
 
-      <div className="flex flex-col gap-10 md:gap-12">
-      <section id="home" className="scroll-mt-24">
-        <Intro />
-      </section>
-      <section id="experience" className="scroll-mt-24">
-        <WorkExperience />
-      </section>
-      <section id="education" className="scroll-mt-24">
-        <Education />
-      </section>
-      <section id="skills" className="scroll-mt-24">
-        <Skills />
-      </section>
-      <section id="projects" className="scroll-mt-24">
-        <Projects />
-      </section>
-      <section id="about" className="scroll-mt-24">
-        <AboutMe />
-      </section>
-      <section id="blogs" className="scroll-mt-24">
-        <FeaturedBlogs />
-      </section>
-      <section id="personal-life" className="scroll-mt-24">
-        <PersonalLife />
-      </section>
-      <section id="contact" className="scroll-mt-24">
-        <ContactMe />
-      </section>
-      </div>
-      </div>
+          <div className="flex flex-col gap-8 md:gap-10">
+            <section id="home" className="scroll-mt-24">
+              <Intro />
+            </section>
+
+            <div className="section-divider" />
+
+            <section id="experience" className="scroll-mt-24 section-accent rounded-2xl">
+              <WorkExperience />
+            </section>
+
+            <section id="education" className="scroll-mt-24">
+              <Education />
+            </section>
+
+            <div className="section-divider" />
+
+            <section id="skills" className="scroll-mt-24 section-accent rounded-2xl">
+              <Skills />
+            </section>
+
+            <section id="about" className="scroll-mt-24">
+              <AboutMe />
+            </section>
+
+            <div className="section-divider" />
+
+            <section id="personal-life" className="scroll-mt-24 section-accent rounded-2xl">
+              <PersonalLife />
+            </section>
+
+            <section id="projects" className="scroll-mt-24">
+              <Projects />
+            </section>
+
+            <div className="section-divider" />
+
+            <section id="blogs" className="scroll-mt-24 section-accent rounded-2xl">
+              <FeaturedBlogs />
+            </section>
+
+            <section id="contact" className="scroll-mt-24">
+              <ContactMe />
+            </section>
+          </div>
+        </div>
       </main>
     </>
   );

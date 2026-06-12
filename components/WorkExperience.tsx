@@ -64,7 +64,7 @@ export default function WorkExperience() {
     <section>
       <h2 className="text-2xl font-bold mb-6">Work Experience</h2>
       <div className="section-card mb-6 p-4">
-        <h3 className="mb-3 text-sm font-semibold uppercase tracking-wide text-zinc-700 dark:text-zinc-300">
+        <h3 className="mb-3 text-sm font-semibold uppercase tracking-wide text-zinc-700">
           Tech Stack Used
         </h3>
         <div className="flex flex-wrap gap-2">
@@ -73,7 +73,7 @@ export default function WorkExperience() {
               key={tech}
               variant="outline"
               size="sm"
-              className="h-8 rounded-xl border-dashed bg-zinc-50 px-3 text-xs text-zinc-800 hover:bg-zinc-100 dark:bg-zinc-900 dark:text-zinc-200 dark:hover:bg-zinc-800"
+              className="h-8 rounded-xl border-dashed bg-zinc-50 px-3 text-xs text-zinc-800 hover:bg-zinc-100"
             >
               {tech}
             </Button>
@@ -93,11 +93,11 @@ export default function WorkExperience() {
               />
             </div>
             <div className="min-w-0">
-              <h3 className="font-semibold text-zinc-900 dark:text-zinc-100">
+              <h3 className="font-semibold text-zinc-900">
                 {exp.role} | {exp.company}, {exp.location}
                 {exp.period ? ` | ${exp.period}` : ""}
               </h3>
-              <ul className="mt-2 space-y-1 text-zinc-600 dark:text-zinc-400">
+              <ul className="mt-2 space-y-1 text-zinc-600">
                 {exp.highlights.map((point, pointIndex) => (
                   <li key={pointIndex}>• {point}</li>
                 ))}

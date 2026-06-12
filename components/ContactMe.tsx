@@ -81,7 +81,7 @@ export default function ContactMe() {
   return (
     <section>
       <h2 className="text-2xl font-bold mb-6">Get in Touch</h2>
-      <p className="text-zinc-600 dark:text-zinc-400 mb-6">
+      <p className="text-zinc-600 mb-6">
         I&apos;m currently open to new opportunities. Feel free to reach out!
       </p>
       <div className="flex gap-4">
@@ -91,7 +91,7 @@ export default function ContactMe() {
             href={social.link}
             target="_blank"
             rel="noopener noreferrer"
-            className="px-4 py-2 border border-zinc-300 dark:border-zinc-700 rounded-lg hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors"
+            className="px-4 py-2 border border-zinc-300 rounded-lg hover:bg-zinc-100 transition-colors"
           >
             {social.name}
           </a>
@@ -99,12 +99,12 @@ export default function ContactMe() {
       </div>
 
       <div className="mt-6 section-card p-4">
-        <h3 className="mb-2 text-lg font-semibold text-zinc-900 dark:text-zinc-100">Last listened on Spotify</h3>
+        <h3 className="mb-2 text-lg font-semibold text-zinc-900">Last listened on Spotify</h3>
 
         {spotifyError ? (
-          <p className="text-sm text-zinc-600 dark:text-zinc-400">{spotifyError}</p>
+          <p className="text-sm text-zinc-600">{spotifyError}</p>
         ) : !spotifyTrack ? (
-          <p className="text-sm text-zinc-600 dark:text-zinc-400">Loading latest track...</p>
+          <p className="text-sm text-zinc-600">Loading latest track...</p>
         ) : (
           <div className="flex items-center gap-4">
             {spotifyTrack.imageUrl ? (
@@ -122,13 +122,13 @@ export default function ContactMe() {
                 href={spotifyTrack.songUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block truncate font-medium text-zinc-900 hover:underline dark:text-zinc-100"
+                className="block truncate font-medium text-zinc-900 hover:underline"
               >
                 {spotifyTrack.name}
               </a>
-              <p className="truncate text-sm text-zinc-600 dark:text-zinc-400">{spotifyTrack.artist}</p>
-              <p className="truncate text-xs text-zinc-500 dark:text-zinc-500">{spotifyTrack.album}</p>
-              <p className="truncate text-xs text-emerald-600 dark:text-emerald-400">{getPlayedLabel(spotifyTrack)}</p>
+              <p className="truncate text-sm text-zinc-600">{spotifyTrack.artist}</p>
+              <p className="truncate text-xs text-zinc-500">{spotifyTrack.album}</p>
+              <p className="truncate text-xs text-emerald-600">{getPlayedLabel(spotifyTrack)}</p>
             </div>
           </div>
         )}

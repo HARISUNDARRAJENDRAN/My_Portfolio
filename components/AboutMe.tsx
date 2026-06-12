@@ -92,24 +92,24 @@ export default function AboutMe() {
       <h2 className="text-2xl font-bold mb-6">About Me</h2>
       <div className="space-y-8">
         <div>
-          <h3 className="text-lg font-semibold text-zinc-900 dark:text-zinc-100">
+          <h3 className="text-lg font-semibold text-zinc-900">
             Harisundar.R
           </h3>
-          <p className="mt-2 text-base leading-7 text-zinc-700 dark:text-zinc-300">
+          <p className="mt-2 text-base leading-7 text-zinc-700">
             Overfitted to system design contents, Undertrained on real-world datasets. Pending Generalization and currently running life in a single node cluster with no horizontal scaling
           </p>
         </div>
 
         <div className="section-card p-6">
-          <div className="mb-4 text-xs font-semibold uppercase tracking-wide text-zinc-600 dark:text-zinc-400">
+          <div className="mb-4 text-xs font-semibold uppercase tracking-wide text-zinc-600">
             Featured
           </div>
           <div className="mb-6 flex items-start justify-between">
             <div>
-              <h4 className="text-xl font-bold text-zinc-900 dark:text-zinc-100">
+              <h4 className="text-xl font-bold text-zinc-900">
                 GitHub Activity
               </h4>
-              <p className="mt-1 text-sm text-zinc-600 dark:text-zinc-400">
+              <p className="mt-1 text-sm text-zinc-600">
                 {loading ? (
                   <span>Loading contributions...</span>
                 ) : (
@@ -121,7 +121,7 @@ export default function AboutMe() {
                   </>
                 )}
               </p>
-              <p className="mt-3 text-center text-sm italic text-zinc-600 dark:text-zinc-400">
+              <p className="mt-3 text-center text-sm italic text-zinc-600">
                 Is the Grass really green on the other side
               </p>
             </div>
@@ -129,18 +129,18 @@ export default function AboutMe() {
               href="https://github.com/HARISUNDARRAJENDRAN"
               target="_blank"
               rel="noreferrer"
-              className="text-xs font-medium text-zinc-700 underline-offset-4 hover:underline dark:text-zinc-300"
+              className="text-xs font-medium text-zinc-700 underline-offset-4 hover:underline"
             >
               View Profile
             </a>
           </div>
 
           {error ? (
-            <p className="text-sm text-red-600 dark:text-red-400">{error}</p>
+            <p className="text-sm text-red-600">{error}</p>
           ) : loading ? (
-            <p className="text-sm text-zinc-600 dark:text-zinc-400">Loading GitHub activity...</p>
+            <p className="text-sm text-zinc-600">Loading GitHub activity...</p>
           ) : contributions.length === 0 ? (
-            <p className="text-sm text-zinc-600 dark:text-zinc-400">
+            <p className="text-sm text-zinc-600">
               No contribution activity available yet.
             </p>
           ) : (

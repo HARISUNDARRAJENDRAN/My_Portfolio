@@ -17,13 +17,13 @@ export default function Blogs() {
           <a
             key={index}
             href={blog.link}
-            className="block p-6 border border-zinc-200 dark:border-zinc-800 rounded-xl hover:border-zinc-300 dark:hover:border-zinc-700 transition-colors"
+            className="block p-6 border border-zinc-200 rounded-xl hover:border-zinc-300 transition-colors"
           >
-            <h3 className="font-semibold text-zinc-900 dark:text-zinc-100">
+            <h3 className="font-semibold text-zinc-900">
               {blog.title}
             </h3>
-            <p className="text-zinc-600 dark:text-zinc-400 mt-2">{blog.description}</p>
-            <p className="text-sm text-zinc-500 dark:text-zinc-500 mt-3">
+            <p className="text-zinc-600 mt-2">{blog.description}</p>
+            <p className="text-sm text-zinc-500 mt-3">
               {blog.date} · {blog.readTime}
             </p>
           </a>
